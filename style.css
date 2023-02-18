@@ -1,0 +1,72 @@
+html {
+    background-color: rgb(241, 238, 238);
+}
+
+body {
+    height: 500px;
+    width: 415px;
+    border-style: solid;
+    border-color: #f58e9f;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: rgb(243, 203, 209);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#display {
+    height: 110px;
+    border-style: solid;
+    border-color: grey;
+    background-color: rgb(164, 197, 164);
+    border-width: 2px;
+    margin: 6px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+#buttons {
+    margin: 4px;
+    font-size: 0;  
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#AC {
+    width: calc(75% - 1px);
+    height: 70px;
+    font-size: medium;
+    margin-right: 1px;
+    margin-bottom: 1.5px;
+}
+
+.operator {
+    height: 70px;
+    width: 24.75%;
+    font-size: medium;
+}
+
+.button {
+    height: 70px;
+    width: 24.75%;
+    font-size: medium;
+    margin-right: 1px;
+    margin-bottom: 1.5px;
+}
+
+#zero {
+    height: 70px;
+    width: 49.75%;
+    font-size: medium;
+    margin-right: 1px;
+}
+
+#equal {
+    height: 70px;
+    width: 49.75%;
+    font-size: medium;
+}

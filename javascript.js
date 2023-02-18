@@ -21,10 +21,8 @@ function operate(operator,a,b){
         return subtract(a,b)
     } else if (operator === "*") {
         return multiply(a,b)
-    } else if (operator === "/") {
-        return divide(a,b)
     } else {
-        return "error"
-    }
+        return divide(a,b)
+    } 
 }
 
