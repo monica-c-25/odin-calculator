@@ -32,11 +32,18 @@ buttons.forEach(button => button.addEventListener("click", display));
 function display() {
     content = this.textContent;
     if (typeof (parseInt(content) === "NaN")) {
+        document.getElementById("display").innerHTML += content;
         return content;
     } else {
+        document.getElementById("display").innerHTML += parseInt(content);
         return parseInt(content);
     }
+    //populate(display());
 }
+
+
+
+
 
 
 
