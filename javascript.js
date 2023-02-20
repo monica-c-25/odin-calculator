@@ -10,12 +10,15 @@ function display() {
         document.getElementById("display").innerHTML = "";
         array = [];
         operator = '';
+    }else if (content === "=") {
+        if (document.getElementById("display").innerHTML.length < 3){
+            } else {
+                document.getElementById("display").innerHTML += content;
+                return null
+            }
     }else if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
         document.getElementById("display").innerHTML += content;
         return operator += content; 
-    } else if (content === "=") {
-        document.getElementById("display").innerHTML += content;
-        return null
     } else {
         document.getElementById("display").innerHTML += content;
         return array.push(parseInt(content));
@@ -26,13 +29,14 @@ const equal = document.getElementById("equal");
 equal.addEventListener('click', operate);
 
 function operate(){
-    if (operator === '+') {
+    if (document.getElementById("display").innerHTML.length < 3) {
+    } else if (operator === '+') {
         add(array);
     } else if (operator === '-') {
         subtract(array);
     } else if (operator === '*') {
         multiply(array);
-    } else {
+    } else if (operator === '/') {
         divide(array);
     } 
 }
