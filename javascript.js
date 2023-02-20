@@ -6,12 +6,18 @@ let operator = '';
 
 function display() {
     content = this.textContent;
-    document.getElementById("display").innerHTML += content;
-    if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
+    if (content === "AC") {
+        document.getElementById("display").innerHTML = "";
+        array = [];
+        operator = '';
+    }else if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
+        document.getElementById("display").innerHTML += content;
         return operator += content; 
     } else if (content === "=") {
+        document.getElementById("display").innerHTML += content;
         return null
     } else {
+        document.getElementById("display").innerHTML += content;
         return array.push(parseInt(content));
     };
 }
@@ -32,20 +38,32 @@ function operate(){
 }
 
 function add(x) {
-    console.log((x.reduce((a,b) => (a + b)))); 
+    total = (x.reduce((a,b) => (a + b)));
+    document.getElementById("display").innerHTML += total
 }
 
 
 function subtract(x) {
-    console.log(x.reduce((a,b) => (a - b)));
+    total = (x.reduce((a,b) => (a - b)));
+    document.getElementById("display").innerHTML += total
 }
 
 function multiply(x) {
-    console.log(x.reduce((a,b) => (a * b)));
+    total = (x.reduce((a,b) => (a * b)));
+    document.getElementById("display").innerHTML += total
 }
 
 function divide(x) {
-    console.log(x.reduce((a,b) => (a / b)))
+    const arr = x;
+    if (arr.at(1) === 0) {
+        alert("Do not divide by 0!");
+        document.getElementById("display").innerHTML = "";
+        array = [];
+        operator = '';
+    } else {
+        total = (x.reduce((a,b) => (a / b)));
+        document.getElementById("display").innerHTML += total
+    }
 }
 
  
