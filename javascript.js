@@ -1,45 +1,56 @@
-function add(a,b) {
-    return a+b
-}
-
-function subtract(a,b) {
-    return a-b
-}
-
-function multiply(a,b) {
-    return a*b
-}
-
-function divide(a,b) {
-    return a/b
-}
-
-function operate(operator,a,b){
-    if (operator === "+") {
-        return add(a,b)
-    } else if (operator === "-") {
-        return subtract(a,b)
-    } else if (operator === "*") {
-        return multiply(a,b)
-    } else {
-        return divide(a,b)
-    } 
-}
-
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", display));
 
+let array = [];
+let operator = '';
+
 function display() {
     content = this.textContent;
-    if (typeof (parseInt(content) === "NaN")) {
-        document.getElementById("display").innerHTML += content;
-        return content;
+    document.getElementById("display").innerHTML += content;
+    if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
+        return operator += content; 
+    } else if (content === "=") {
+        return null
     } else {
-        document.getElementById("display").innerHTML += parseInt(content);
-        return parseInt(content);
-    }
-    //populate(display());
+        return array.push(parseInt(content));
+    };
 }
+
+const equal = document.getElementById("equal");
+equal.addEventListener('click', operate);
+
+function operate(){
+    if (operator === '+') {
+        add(array);
+    } else if (operator === '-') {
+        subtract(array);
+    } else if (operator === '*') {
+        multiply(array);
+    } else {
+        divide(array);
+    } 
+}
+
+function add(x) {
+    console.log((x.reduce((a,b) => (a + b)))); 
+}
+
+
+function subtract(x) {
+    console.log(x.reduce((a,b) => (a - b)));
+}
+
+function multiply(x) {
+    console.log(x.reduce((a,b) => (a * b)));
+}
+
+function divide(x) {
+    console.log(x.reduce((a,b) => (a / b)))
+}
+
+ 
+
+
 
 
 
