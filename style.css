@@ -4,12 +4,12 @@ html {
 
 body {
     height: 500px;
-    width: 415px;
+    width: 400px;
     border-style: solid;
-    border-color: #f58e9f;
+    border-color: #f89cab;
     border-width: 5px;
     border-radius: 10px;
-    background-color: rgb(243, 203, 209);
+    background-color: rgb(254, 215, 221);
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -18,8 +18,8 @@ body {
 #display {
     height: 110px;
     border-style: solid;
-    border-color: grey;
-    background-color: rgb(164, 197, 164);
+    border-color: rgb(69, 69, 69);
+    background-color: rgb(239, 239, 239);
     border-width: 2px;
     margin: 6px;
     font-size: 40px;
@@ -39,34 +39,44 @@ body {
 #AC {
     width: calc(75% - 1px);
     height: 70px;
-    font-size: medium;
+    font-size: x-large;
     margin-right: 1px;
     margin-bottom: 1.5px;
+    border-radius: 10px;
+    background-color: rgb(203, 242, 229);
 }
 
 .operator {
     height: 70px;
     width: 24.75%;
-    font-size: medium;
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: rgb(255, 205, 113);
 }
 
 .button {
     height: 70px;
     width: 24.75%;
-    font-size: medium;
+    font-size: x-large;
     margin-right: 1px;
     margin-bottom: 1.5px;
+    border-radius: 10px;
+    background-color: lavender;
 }
 
 #zero {
     height: 70px;
     width: 49.75%;
-    font-size: medium;
+    font-size: x-large;
     margin-right: 1px;
+    border-radius: 10px;
+    background-color: lavender;
 }
 
 #equal {
     height: 70px;
     width: 49.75%;
-    font-size: medium;
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: rgb(203, 242, 229);
 }

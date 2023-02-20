@@ -26,3 +26,19 @@ function operate(operator,a,b){
     } 
 }
 
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => button.addEventListener("click", display));
+
+function display() {
+    content = this.textContent;
+    if (typeof (parseInt(content) === "NaN")) {
+        return content;
+    } else {
+        return parseInt(content);
+    }
+}
+
+
+
+
+
