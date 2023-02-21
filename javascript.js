@@ -26,9 +26,12 @@ function display() {
             document.getElementById("display").innerHTML += content;
             return operator += content; 
         } else {
-            compute(num, numTwo, operator);
-            document.getElementById("display").innerHTML += content;
-            return operator += content;
+            if ((operator === "/") && (numTwo === "0") ) {
+                compute(num, numTwo, operator);
+                return operator = "";
+            } else compute(num, numTwo, operator);
+                document.getElementById("display").innerHTML += content;
+                return operator += content;
         } 
     } else {
         if (operator.length === 0) {
