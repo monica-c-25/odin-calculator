@@ -21,11 +21,15 @@ function display() {
                 compute(num, numTwo, operator);
             }
     }else if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
-        if (operator === '') {
-        document.getElementById("display").innerHTML += content;
-        return operator += content; 
+        if (num === '' ) {
+        } else if (operator === '') {
+            document.getElementById("display").innerHTML += content;
+            return operator += content; 
         } else {
-        }
+            compute(num, numTwo, operator);
+            document.getElementById("display").innerHTML += content;
+            return operator += content;
+        } 
     } else {
         if (operator.length === 0) {
             document.getElementById("display").innerHTML += content;
