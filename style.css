@@ -1,12 +1,12 @@
 html {
-    background-color: rgb(241, 238, 238);
+    background-color: rgb(128, 221, 240);
 }
 
 body {
     height: 500px;
     width: 400px;
     border-style: solid;
-    border-color: #f89cab;
+    border-color: #f9acb9;
     border-width: 5px;
     border-radius: 10px;
     background-color: rgb(254, 215, 221);
