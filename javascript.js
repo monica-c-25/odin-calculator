@@ -4,6 +4,7 @@ buttons.forEach(button => button.addEventListener("click", display));
 let num = '';
 let numTwo = '';
 let operator = '';
+let equals = '';
 
 function display() {
     content = this.textContent;
@@ -13,10 +14,11 @@ function display() {
         numTwo = '';
         operator = '';
     }else if (content === "=") {
-        if ( (num === []) || (numTwo === []) || (operator === '')) {
+        if ( (num === '') || (numTwo === '') || (operator === '')) {
             } else {
                 document.getElementById("display").innerHTML += content;
-                return null
+                equals += content;
+                compute(num, numTwo, operator);
             }
     }else if ( (content === "+") || (content ==="*") || (content === "-") || (content === "/")) {
         if (operator === '') {
@@ -29,9 +31,10 @@ function display() {
             document.getElementById("display").innerHTML += content;
             return num += content;
         } else {
-            document.getElementById("display").innerHTML += content;
-            numTwo += content;
-            compute(num, numTwo, operator);
+            if (equals.length === 0) {
+                document.getElementById("display").innerHTML += content;
+                numTwo += content;
+            } 
         }
     };
 }
@@ -65,6 +68,7 @@ function add(x) {
     num += total.toString();
     numTwo = '';
     operator = '';
+    equals = '';
 }
 
 
@@ -76,6 +80,7 @@ function subtract(x) {
     num += total.toString();
     numTwo = '';
     operator = '';
+    equals = '';
 }
 
 function multiply(x) {
@@ -86,6 +91,7 @@ function multiply(x) {
     num += total.toString();
     numTwo = '';
     operator = '';
+    equals = '';
 }
 
 function divide(x) {
@@ -96,6 +102,7 @@ function divide(x) {
         num = '';
         numTwo = '';
         operator = '';
+        equals = '';
     } else {
         total =(x.reduce((a,b) => (a / b)));
         round = Math.round(100 * total)/100;
@@ -105,6 +112,7 @@ function divide(x) {
         num += total.toString();
         numTwo = '';
         operator = '';
+        equals = '';
     }
 }
 

@@ -1,15 +1,15 @@
 html {
-    background-color: rgb(128, 221, 240);
+    background-color: #daeaf6;
 }
 
 body {
     height: 500px;
     width: 400px;
     border-style: solid;
-    border-color: #f9acb9;
+    border-color: #f9bfc9;
     border-width: 5px;
     border-radius: 10px;
-    background-color: rgb(254, 215, 221);
+    background-color: #fce1e4;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -43,7 +43,7 @@ body {
     margin-right: 1px;
     margin-bottom: 1.5px;
     border-radius: 10px;
-    background-color: rgb(203, 242, 229);
+    background-color: #ddedea;
 }
 
 .operator {
@@ -51,7 +51,7 @@ body {
     width: 24.75%;
     font-size: x-large;
     border-radius: 10px;
-    background-color: rgb(255, 205, 113);
+    background-color: #f8ebc3;
 }
 
 .button {
@@ -61,7 +61,7 @@ body {
     margin-right: 1px;
     margin-bottom: 1.5px;
     border-radius: 10px;
-    background-color: lavender;
+    background-color: #e8dff5;
 }
 
 #zero {
@@ -70,7 +70,7 @@ body {
     font-size: x-large;
     margin-right: 1px;
     border-radius: 10px;
-    background-color: lavender;
+    background-color: #e8dff5;
 }
 
 #equal {
@@ -78,5 +78,5 @@ body {
     width: 49.75%;
     font-size: x-large;
     border-radius: 10px;
-    background-color: rgb(203, 242, 229);
+    background-color: #ddedea;
 }
